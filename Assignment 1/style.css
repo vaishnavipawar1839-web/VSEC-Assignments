@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#4F46E5,#7C3AED);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:350px;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    color:#333;
+}
+
+.container p{
+    text-align:center;
+    color:gray;
+    margin:10px 0 20px;
+}
+
+.input-box{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-box input{
+    width:100%;
+    padding:12px 40px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.input-box .fa-user,
+.input-box .fa-lock{
+    position:absolute;
+    left:12px;
+    top:13px;
+    color:gray;
+}
+
+#eye{
+    position:absolute;
+    right:12px;
+    top:13px;
+    cursor:pointer;
+    color:gray;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+.row a{
+    text-decoration:none;
+    color:#4F46E5;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#4F46E5;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#3730A3;
+}
+
+#message{
+    margin-top:15px;
+    font-weight:bold;
+}
