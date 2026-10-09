@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-family: Arial, sans-serif;
+}
+
+h1 {
+margin-bottom: 50px;
+}
+
+#toggle {
+display: none;
+}
+
+.box-container {
+width: 300px;
+height: 300px;
+position: relative;
+display: block;
+cursor: pointer;
+}
+
+.box {
+width: 150px;
+height: 150px;
+position: absolute;
+transition: all 1s ease;
+}
+
+/* Initial position */
+
+.red {
+background-color: red;
+top: 0;
+left: 0;
+}
+
+.blue {
+background-color: blue;
+top: 0;
+left: 150px;
+}
+
+.green {
+background-color: green;
+top: 150px;
+left: 0;
+}
+
+.yellow {
+background-color: yellow;
+top: 150px;
+left: 150px;
+}
+
+/* After clicking - boxes separate */
+
+#toggle:checked + .box-container .red {
+top: -80px;
+left: -80px;
+transform: rotate(90deg);
+}
+
+#toggle:checked + .box-container .blue {
+top: -80px;
+left: 230px;
+transform: rotate(90deg);
+}
+
+#toggle:checked + .box-container .green {
+top: 230px;
+left: -80px;
+transform: rotate(90deg);
+}
+
+#toggle:checked + .box-container .yellow {
+top: 230px;
+left: 230px;
+transform: rotate(90deg);
+}
