@@ -1,0 +1,66 @@
+// Use database
+use("college");
+
+// Find one student
+db.getCollection("student").findOne({});
+
+// Insert one customer
+db.customers.insertOne({
+    name: "Aarav Sharma",
+    city: "Mumbai",
+    age: 28,
+    balance: 45000,
+    tags: ["premium", "tech"],
+    status: "active"
+});
+
+// Insert multiple customers
+db.customers.insertMany([
+    { name: "Priya Patel", city: "Ahmedabad", age: 34, balance: 12000, tags: ["retail"], status: "active" },
+    { name: "Amit Kumar", city: "Delhi", age: 22, balance: 85000, tags: ["premium"], status: "inactive" },
+    { name: "Anjali Menon", city: "Bengaluru", age: 40, balance: 3500, tags: ["student"], status: "active" },
+    { name: "Rajesh Singh", city: "Patna", age: 19, balance: 15000, tags: ["student"], status: "active" }
+]);
+
+// Display all customers
+db.customers.find();
+
+// Find customers from Mumbai
+db.customers.find({ city: { $eq: "Mumbai" } });
+
+// Find customers aged 25 or below
+db.customers.find({ age: { $lte: 25 } });
+
+// Find customers from Delhi or Bengaluru
+db.customers.find({ city: { $in: ["Delhi", "Bengaluru"] } });
+
+// Find active customers with balance above 20000
+db.customers.find({
+    $and: [
+        { status: "active" },
+        { balance: { $gt: 20000 } }
+    ]
+});
+
+// Increase Aarav's balance by 5000
+db.customers.updateOne(
+    { name: "Aarav Sharma" },
+    { $inc: { balance: 5000 } }
+);
+
+// Update low-balance customers
+db.customers.updateMany(
+    { balance: { $lt: 5000 } },
+    { $set: { status: "low_balance" } }
+);
+
+// Delete Rajesh
+db.customers.deleteOne({ name: "Rajesh Singh" });
+
+// Delete inactive customers from Delhi
+db.customers.deleteMany({
+    $and: [
+        { status: "inactive" },
+        { city: "Delhi" }
+    ]
+});

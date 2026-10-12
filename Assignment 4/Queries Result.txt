@@ -1,0 +1,40 @@
+MONGODB BASIC COMMANDS - RESULTS
+
+Database: college
+Collection: customers
+
+1. Insert One
+Aarav Sharma inserted successfully.
+Output: acknowledged: true
+
+2. Insert Many
+Four customer documents inserted successfully.
+Output: acknowledged: true
+
+3. Find All Customers
+Five customer documents displayed.
+
+4. Find Customer from Mumbai
+Aarav Sharma displayed.
+
+5. Find Customers with Age 25 or Below
+Amit Kumar and Rajesh Singh displayed.
+
+6. Find Customers from Delhi or Bengaluru
+Amit Kumar and Anjali Menon displayed.
+
+7. Update Many
+Customers with balance below 5000 were updated.
+Output:
+acknowledged: true
+matchedCount: 1
+modifiedCount: 1
+
+8. Delete One
+Rajesh Singh deleted successfully.
+Output:
+acknowledged: true
+deletedCount: 1
+
+Result:
+MongoDB insert, read, update and delete operations were performed successfully.

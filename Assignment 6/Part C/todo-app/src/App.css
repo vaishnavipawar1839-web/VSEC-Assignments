@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.todo-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #e0e4e8;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #263b50;
+}
+
+.subtitle {
+  margin: 8px 0 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+.task-input {
+  display: flex;
+  gap: 8px;
+}
+
+.task-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #cbd2d9;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.task-input input:focus {
+  border-color: #456b91;
+}
+
+button {
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task-input button {
+  background: #456b91;
+  color: white;
+}
+
+.task-input button:hover {
+  background: #355575;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin: 22px 0 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabs button {
+  flex: 1;
+  background: #f0f2f4;
+  color: #444;
+}
+
+.tabs button.active {
+  background: #456b91;
+  color: white;
+}
+
+.task-list {
+  min-height: 40px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 4px;
+  border-bottom: 1px solid #eceff1;
+}
+
+.task label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.task label input {
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.task label.done {
+  color: #888;
+  text-decoration: line-through;
+}
+
+.delete {
+  flex-shrink: 0;
+  padding: 7px 10px;
+  background: #fff;
+  color: #b44343;
+  border: 1px solid #e2bcbc;
+}
+
+.delete:hover {
+  background: #fff1f1;
+}
+
+.empty {
+  padding: 18px 0;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.total {
+  margin: 18px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  color: #666;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 25px 12px;
+  }
+
+  .todo-card {
+    padding: 20px 16px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  .task {
+    gap: 8px;
+  }
+}

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WELCOME TO KBTCOE</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="card">
+    <div class="logo">KBT</div>
+    <h1>WELCOME TO KBTCOE</h1>
+    <p class="subtitle">Your student journey starts here.</p>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="login">Login</button>
+      <button class="tab" data-tab="register">Register</button>
+    </div>
+
+    <form id="loginForm">
+      <label>Username</label>
+      <input id="username" placeholder="Enter username" required>
+
+      <label>Password</label>
+      <div class="password">
+        <input id="password" type="password"
+               placeholder="Enter password" required minlength="4">
+        <button type="button" class="show">Show</button>
+      </div>
+
+      <label class="remember">
+        <input type="checkbox"> Remember me
+      </label>
+
+      <button class="submit">Sign In</button>
+    </form>
+
+    <form id="registerForm" hidden>
+      <label>Full Name</label>
+      <input id="fullname" placeholder="Enter full name" required>
+
+      <label>Username</label>
+      <input id="newuser" placeholder="Create username" required>
+
+      <label>Password</label>
+      <div class="password">
+        <input id="newpass" type="password"
+               placeholder="Create password" required minlength="4">
+        <button type="button" class="show">Show</button>
+      </div>
+
+      <button class="submit">Create Account</button>
+    </form>
+
+    <p id="message" role="status"></p>
+    <p class="footer">Student Portal • Learn. Grow. Achieve.</p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

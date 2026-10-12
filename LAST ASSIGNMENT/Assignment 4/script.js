@@ -33,7 +33,7 @@ function analyzeName() {
 
     if (result == 1) {
 
-        personality = "Natural Leader 👑";
+        personality = "Natural Leader 👑";n
         strength = "Confidence";
         mood = "Energetic ⚡";
         prediction = "You may take the lead in something new!";

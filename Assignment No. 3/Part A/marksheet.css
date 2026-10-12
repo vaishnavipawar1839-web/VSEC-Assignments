@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 16px;
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: #e5edf7;
+}
+
+.container {
+    width: 95%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 32px;
+    background: #1b2638;
+    border: 1px solid #334155;
+    border-radius: 18px;
+}
+
+h1 {
+    text-align: center;
+    color: #5eead4;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #cbd5e1;
+    margin-top: 32px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #334155;
+}
+
+.form-box {
+    max-width: 650px;
+    margin: auto;
+    padding: 25px;
+    background: #243247;
+    border-radius: 14px;
+    border: 1px solid #3b4b63;
+}
+
+label {
+    display: block;
+    margin: 16px 0 7px;
+    color: #cbd5e1;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    background: #111c2d;
+    color: white;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:focus {
+    outline: none;
+    border-color: #5eead4;
+    box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.12);
+}
+
+button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #0d9488;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #0f766e;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: #243247;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #0f766e;
+    color: white;
+    padding: 15px 10px;
+}
+
+td {
+    padding: 13px 10px;
+    text-align: center;
+    border-bottom: 1px solid #3b4b63;
+    color: #e2e8f0;
+}
+
+tbody tr:nth-child(even) {
+    background: #202d40;
+}
+
+#topper {
+    text-align: center;
+    color: #5eead4;
+    margin-top: 25px;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 12px 5px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .form-box {
+        padding: 15px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}

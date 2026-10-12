@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Marks Record System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+<h2>Student Marks Record System</h2>
+
+<input type="text" id="name" placeholder="Enter Student Name">
+<input type="text" id="roll" placeholder="Enter Roll Number">
+
+<input type="number" id="sub1" placeholder="Operating Systems Marks">
+<input type="number" id="sub2" placeholder="DBMS Marks">
+<input type="number" id="sub3" placeholder="Computer Networks Marks">
+
+<button id="addBtn">Add Record</button>
+
+<table>
+<thead>
+<tr>
+<th>Roll No</th>
+<th>Name</th>
+<th>Operating Systems</th>
+<th>DBMS</th>
+<th>Computer Networks</th>
+<th>Total</th>
+<th>Percentage</th>
+<th>Grade</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="tableBody">
+</tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

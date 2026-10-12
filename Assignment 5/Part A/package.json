@@ -1,0 +1,13 @@
+
+{
+  "name": "arrays-api",
+  "version": "1.0.0",
+  "main": "arrayAPI.js",
+  "scripts": {
+    "start": "node arrayAPI.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
+

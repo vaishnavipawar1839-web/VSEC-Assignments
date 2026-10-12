@@ -1,0 +1,108 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+#toggle {
+    display: none;
+}
+
+.square {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.box-container {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    transition: all 1s ease;
+}
+
+.red {
+    background-color: red;
+    top: 0;
+    left: 0;
+}
+
+.blue {
+    background-color: blue;
+    top: 0;
+    left: 150px;
+}
+
+.green {
+    background-color: green;
+    top: 150px;
+    left: 0;
+}
+
+.yellow {
+    background-color: yellow;
+    top: 150px;
+    left: 150px;
+}
+
+.hello {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Boxes move when clicked */
+
+#toggle:checked ~ .square .red {
+    top: -80px;
+    left: -80px;
+    transform: rotate(90deg);
+}
+
+#toggle:checked ~ .square .blue {
+    top: -80px;
+    left: 230px;
+    transform: rotate(90deg);
+}
+
+#toggle:checked ~ .square .green {
+    top: 230px;
+    left: -80px;
+    transform: rotate(90deg);
+}
+
+#toggle:checked ~ .square .yellow {
+    top: 230px;
+    left: 230px;
+    transform: rotate(90deg);
+}
+
+/* Show Hello when boxes move */
+
+#toggle:checked ~ .square .hello {
+    opacity: 1;
+}

@@ -1,0 +1,139 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #eaf0ff, #dce8f8);
+  color: #253452;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px #25345220;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #315fc0;
+  color: white;
+  font-weight: bold;
+}
+
+h1, .subtitle, .footer {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 25px;
+}
+
+.subtitle, .footer {
+  color: #7b8498;
+  font-size: 13px;
+}
+
+.tabs {
+  display: flex;
+  margin: 25px 0 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: white;
+  color: #777;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #315fc0;
+  border-bottom: 3px solid #315fc0;
+  font-weight: bold;
+}
+
+form label {
+  display: block;
+  margin: 14px 0 7px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d5dbea;
+  border-radius: 7px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #315fc0;
+}
+
+.password {
+  display: flex;
+}
+
+.password input {
+  padding-right: 55px;
+}
+
+.show {
+  margin-left: -52px;
+  border: none;
+  background: transparent;
+  color: #315fc0;
+  cursor: pointer;
+}
+
+.remember {
+  display: flex !important;
+  align-items: center;
+  gap: 7px;
+  font-weight: normal !important;
+}
+
+.submit {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 7px;
+  background: #315fc0;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: #244a9b;
+}
+
+#message {
+  text-align: center;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  margin-top: 22px;
+}

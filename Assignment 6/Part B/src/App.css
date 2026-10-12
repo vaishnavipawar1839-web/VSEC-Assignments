@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f4f7;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-card {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px #ccc;
+}
+
+h1 {
+  text-align: center;
+  font-size: 25px;
+  color: #333;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group > label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-group input:not([type="radio"]) {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.gender-options {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gender-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 11px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background: #1d4ed8;
+}
+
+.details {
+  background: #f8f9fa;
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+
+.details p {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 10px;
+  margin: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.details p:last-child {
+  border-bottom: none;
+}
+
+.details strong {
+  color: #2563eb;
+  text-align: left;
+}
+
+.details p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 400px) {
+  .details p {
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 8px;
+    font-size: 14px;
+  }
+}
