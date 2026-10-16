@@ -1,0 +1,283 @@
+
+/* Main Layout */
+.container {
+  max-width: 1450px;
+  margin: auto;
+  padding: 24px 30px;
+}
+
+body {
+  background: #eff6ff;
+  color: #172554;
+}
+
+header {
+  background: linear-gradient(120deg, #0755c9, #4f46e5, #8b5cf6);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 8px 25px #4338ca30;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+header p {
+  margin: 0;
+  color: #e0e7ff;
+}
+
+footer {
+  text-align: center;
+  color: #64748b;
+  padding: 25px;
+}
+
+/* Navigation Tabs */
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 22px 0;
+}
+
+.tabs button {
+  background: white;
+  color: #475569;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  padding: 15px 10px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.tabs button:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.tabs .selected {
+  background: linear-gradient(120deg, #1670f5, #2563eb);
+  color: white;
+  border-color: #2563eb;
+  box-shadow: 0 5px 15px #2563eb30;
+}
+
+/* Buttons */
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 3px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+button:hover {
+  filter: brightness(0.94);
+  transform: translateY(-1px);
+}
+
+.delete {
+  background: #ef4444;
+}
+
+.cancel {
+  background: #64748b;
+}
+
+/* Dashboard Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 22px 0;
+}
+
+.cards div {
+  background: linear-gradient(145deg, #ffffff, #f8fbff);
+  padding: 24px;
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px #1e40af0c;
+  transition: 0.2s;
+}
+
+.cards div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px #1e40af18;
+}
+
+.cards h2 {
+  font-size: 34px;
+  color: #2563eb;
+  margin: 10px 0 0;
+}
+
+.cards p {
+  color: #64748b;
+  margin: 0;
+}
+
+/* Sections and Forms */
+section {
+  background: white;
+  padding: 24px;
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  box-shadow: 0 5px 20px #1e40af0c;
+}
+
+input,
+select {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 14px;
+  margin: 6px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  color: #172554;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px #3b82f620;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.form button {
+  grid-column: 1 / -1;
+}
+
+/* Product Table */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: white;
+}
+
+th {
+  background: #eff6ff;
+  color: #334155;
+  font-weight: 700;
+}
+
+th,
+td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+tbody tr:hover {
+  background: #f8fbff;
+}
+
+/* Warranty Status */
+.status {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.expiring-soon {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.expired {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.success {
+  color: #15803d;
+}
+
+.error {
+  color: #dc2626;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .container {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  .tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .cards div {
+    padding: 15px;
+  }
+
+  .cards h2 {
+    font-size: 26px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .form button {
+    grid-column: auto;
+  }
+
+  section {
+    padding: 15px;
+  }
+}
